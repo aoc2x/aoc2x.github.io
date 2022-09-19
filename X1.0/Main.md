@@ -1,32 +1,18 @@
 **CFG.smali**
 ```smali
-.class public final Lage/of/civilizations2/jakowski/lukasz/BuildConfig;
-.super Ljava/lang/Object;
-.source "BuildConfig.java"
+.method private static final showAndroidKeyboard()V
 
+    .registers 3
 
-# static fields
-.field public static final APPLICATION_ID:Ljava/lang/String; = "age.of.civilizations2.jakowski.lukasz"
+    sget-object v0, Lage/of/civilizations2/jakowski/lukasz/AoCGame;->mLinkHandler:Lage/of/civilizations2/jakowski/lukasz/LinkHandler;
 
-.field public static final BUILD_TYPE:Ljava/lang/String; = "release"
+    const-string v1, "showKeyboard"
 
-.field public static final DEBUG:Z = false
+    const/4 v2, 0x0
 
-.field public static final FLAVOR:Ljava/lang/String; = ""
-
-.field public static final VERSION_CODE:I = 0x12
-
-.field public static final VERSION_NAME:Ljava/lang/String; = "1.01415_ELA"
-
-
-# direct methods
-.method public constructor <init>()V
-    .registers 1
-
-    .prologue
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {v0, v1, v2}, Lage/of/civilizations2/jakowski/lukasz/LinkHandler;->openPage(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+
 .end method
 ```
