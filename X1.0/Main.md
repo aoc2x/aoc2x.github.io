@@ -1,4 +1,4 @@
-*CFG.smali*
+`CFG.smali
 ```smali
 .class public final Lage/of/civilizations2/jakowski/lukasz/BuildConfig;
 .super Ljava/lang/Object;
